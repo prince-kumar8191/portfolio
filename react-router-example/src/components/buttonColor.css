@@ -1,0 +1,43 @@
+/* Base button styling */
+.hover-button {
+    background-color: #6200ea;
+    color: white;
+    padding: 10px 40px;
+    border: none;
+    border-radius: 40px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+    position: relative;
+    overflow: hidden;
+    z-index: 1;
+  }
+  @media (max-width:820px)
+  {
+    .hover-button{
+      padding: 5px 25px;
+    }
+  }
+  
+  /* Button hover effect */
+  .hover-button::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background-color: #031945ec;
+    transition: all 2s ease;
+    border-radius: 50%;
+    z-index: -1;
+    transform: translateY(0, -50%) scale(0);
+  }
+  
+  .hover-button:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .hover-button:hover {
+    box-shadow: 0px 4px 15px rgba(249, 246, 253, 0.75);
+  }
